@@ -1,38 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./App";
+import CountManager from "./components/Display";
 
-// ReactDOM.render(
-//
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+ReactDOM.render(
 
-const render=()=>
-{
-    document.getElementById('root').innerHTML = `
-    <div>
-      Hello HTML
-      <input />
-      <pre>${new Date().toLocaleTimeString()}</pre>
-    </div>
-  `;
+  <React.StrictMode>
+    <CountManager />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-    ReactDOM.render(
-        React.createElement(
-            'div',
-            null,
-            'Hello React',
-            React.createElement('input', null),
-            React.createElement('pre', null, new Date().toLocaleTimeString())
-        ),
-        document.getElementById('root')
-    );
 
-}
-
-setInterval(render, 1000);
 
 

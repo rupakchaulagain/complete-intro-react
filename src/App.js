@@ -1,23 +1,15 @@
 import React from 'react';
-import CreateElement from "./components/CreateElement";
-import Todo from "./components/Todo";
-import ReactDOM from "react-dom";
+import Button from "./components/Button";
+import Display from "./components/Display";
+
+const CountManager = () => {
+    return (
+        <>
+            <Button />
+            <Display />
+        </>
+    );
+};
 
 
-const App = () => {
-
-
-// function App() {
-//
-//     return (
-//
-//         <div>
-//           <Todo/>
-//           {/*<CreateElement/>*/}
-//         </div>
-//     );
-// }
-
-}
-
-export default App;
+export default CountManager;
