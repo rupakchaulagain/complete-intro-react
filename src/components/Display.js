@@ -12,7 +12,12 @@ const CountManager = () => {
     const [count, setCount] = useState(0);
 
     const incrementCounter = (increment) => {
-        setCount(count + increment);
+        if(increment===0){
+            setCount(0);
+        }else{
+            setCount(count + increment);
+        }
+
     }
 
     return (
@@ -28,6 +33,10 @@ const CountManager = () => {
             <Button
                 clickAction={incrementCounter}
                 clickValue={10}
+            />
+            <Button
+                clickAction={incrementCounter}
+                clickValue={0}
             />
             <Display content={count}/>
         </>
